@@ -7,3 +7,26 @@
     box-sizing: border-box;
 }
 
+.app {
+height:100%;
+background:url('./images/background.jpg');
+background-size:cover;
+display:flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.card {
+    background-color:floralwhite;
+width:40%;
+height:20%;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border-radius: 25px;
+padding: 2%;
+box-shadow: 5px 5px grey;
+font-family: 'Indie Flower', cursive;
+}
