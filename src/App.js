@@ -16,14 +16,20 @@ class App extends React.Component {
         axios.get('https://api.adviceslip.com/advice')
             .then(res => {
                 console.log(res.data.slip.advice);
+                this.setState({ advice: res.data.slip.advice })
             })
             .catch(err => {
                 console.log(err);
             })
     }
     render() {
+        const { advice } = this.state;
         return (
-            <h1>this.fetchingAPI(); </h1>
+            <div className="app">
+                <div className="card">
+                    <h1 className="heading">{advice}</h1>
+                </div>
+            </div>
         )
     }
 }
