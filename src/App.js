@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import axios from 'axios';
 
@@ -23,17 +21,18 @@ class App extends React.Component {
             })
     }
     render() {
-        const { advice } = this.state;
+       
+            const { advice } = this.state;
         return (
             <div className="app">
                 <div className="card">
                     <h1 className="heading">{advice}</h1>
-                    <div className="button">
+                    <div className="button" onClick={this.fetchingAPI}>
                         <span>Advise Me!</span>
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
