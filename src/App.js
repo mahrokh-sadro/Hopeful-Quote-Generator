@@ -11,13 +11,13 @@ class App extends React.Component {
     }
 
     fetchingAPI = () => {
-        axios.get('https://api.adviceslip.com/advice')
+       axios.get('https://api.adviceslip.com/advice')
+       
             .then(res => {
-                console.log(res.data.slip.advice);
                 this.setState({ advice: res.data.slip.advice })
             })
-            .catch(err => {
-                console.log(err);
+            .catch(err => {        
+                alert('Error!');
             })
     }
     render() {

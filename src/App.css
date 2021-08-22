@@ -31,7 +31,9 @@ body {
     box-shadow: 5px 5px grey;
     font-family: 'Indie Flower', cursive;
 }
-
+.heading{
+    font-size: 20px;
+}
 .button {
     position: relative;
     outline: none;
@@ -42,8 +44,10 @@ body {
     align-items: center;
     cursor: pointer;
     text-transform: uppercase;
-    height: 200px;
-    width: 210px;
+    /* max-height: 200px;
+    max-width: 210px; */
+    min-height: 40px;
+    min-width: 210px;
     opacity: 1;
     background-color: #ffffff;
     border: 1px solid rgba(22, 76, 167, 0.6);
