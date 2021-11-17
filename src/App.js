@@ -1,39 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 
 import './App.css';
 
-class App extends React.Component {
-    state = { advice: '' };
-    componentDidMount() {
-        this.fetchingAPI();
+const App = () => {
+
+    const [advice, setAdvice] = useState("you are here ! coincedence ? I don't think so");
+
+    const fetchingAPI = () => {
+        axios.get('https://api.adviceslip.com/advice')
+
+            .then(res => {
+                setAdvice(res.data.slip.advice)
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
-    fetchingAPI = () => {
-       axios.get('https://api.adviceslip.com/advice')
-       
-            .then(res => {
-                this.setState({ advice: res.data.slip.advice })
-            })
-            .catch(err => {        
-                alert('Error!');
-            })
-    }
-    render() {
-       
-            const { advice } = this.state;
-        return (
-            <div className="app">
-                <div className="card">
-                    <h1 className="heading">{advice}</h1>
-                    <button className="button" onClick={this.fetchingAPI}>
-                        <span>Advise Me!</span>
-                    </button>
-                </div>
+
+
+    return (
+        <div className="app">
+            <div className="card">
+                <h1 className="heading">{advice}</h1>
+                <button className="button" onClick={fetchingAPI}>
+                    <span>Advise Me!</span>
+                </button>
             </div>
-        );
-    }
+        </div>
+    );
 }
+
 
 export default App;
