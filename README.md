@@ -1,5 +1,5 @@
 
-https://hopeful-franklin-5f7199.netlify.app/
+https://hopeful-quote-generator.netlify.app/
 
 ## Available Scripts
 
