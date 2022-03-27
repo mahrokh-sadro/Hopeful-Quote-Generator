@@ -1,4 +1,4 @@
-
+![](https://github.com/mahrokh-sadro/Hopeful-Quote-Generator/blob/master/4.jpg)
 https://hopeful-quote-generator.netlify.app/
 
 ## Available Scripts
